@@ -1,21 +1,32 @@
 apiVersion: training.eduk8s.io/v1alpha2
 kind: Workshop
 metadata:
-  name: lab-markdown-sample
+  name: lab-spring-testing
 spec:
-  title: Markdown Sample
-  description: A sample workshop using Markdown
+  title: Spring Testing
+  description: Play area for testing Spring.
+  url: https://github.com/eduk8s-tests/lab-spring-testing
   vendor: eduk8s.io
-  difficulty: beginner
-  duration: 15m
-  url: https://github.com/eduk8s/lab-markdown-sample
-  content:
-    #image: quay.io/eduk8s/lab-markdown-sample:master
-    files: github.com/eduk8s/lab-markdown-sample
+  duration: 60m
+  content: 
+    image: quay.io/eduk8s/jdk11-environment:master
   session:
-    budget: small
+    budget: large
+    resources:
+      memory: 2Gi
     applications:
+      terminal:
+        enabled: true
+        layout: split
       console:
         enabled: true
       editor:
+        enabled: true
+        plugins:
+          enabled: true
+          install:
+          - https://s3-us-west-1.amazonaws.com/s3-test.spring.io/sts4/vscode-extensions/snapshots/vscode-spring-boot-1.18.0-202005071819.vsix
+      registry:
+        enabled: true
+      docker:
         enabled: true

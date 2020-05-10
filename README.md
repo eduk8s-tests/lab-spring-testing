@@ -1,4 +1,4 @@
-LAB - Markdown Sample
-=====================
+LAB - Spring Testing
+====================
 
-Sample workshop content using Markdown formatting for pages.
+Sample workshop for testing development of Spring applications.
