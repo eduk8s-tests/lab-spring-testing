@@ -9,7 +9,7 @@ spec:
   vendor: eduk8s.io
   duration: 60m
   content: 
-    image: quay.io/eduk8s/jdk11-environment:master
+    image: quay.io/eduk8s/jdk11-environment:200511.a963b67
   session:
     budget: large
     resources:
@@ -24,8 +24,6 @@ spec:
         enabled: true
         plugins:
           enabled: true
-          install:
-          - https://s3-us-west-1.amazonaws.com/s3-test.spring.io/sts4/vscode-extensions/snapshots/vscode-spring-boot-1.18.0-202005071819.vsix
       registry:
         enabled: true
       docker:
