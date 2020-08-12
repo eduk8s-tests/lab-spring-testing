@@ -8,10 +8,11 @@ spec:
   url: https://github.com/eduk8s-tests/lab-spring-testing
   vendor: eduk8s.io
   duration: 60m
-  content: 
-    image: quay.io/eduk8s/jdk11-environment:200512.93d7835
+  content:
+    image: jdk11-environment:*
   session:
-    budget: large
+    namespaces:
+      budget: large
     resources:
       memory: 2Gi
     applications:
@@ -22,8 +23,6 @@ spec:
         enabled: true
       editor:
         enabled: true
-        plugins:
-          enabled: true
       registry:
         enabled: true
       docker:
